@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,8 +16,72 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ix0-oG-Ttr">
+                                <rect key="frame" x="246" y="28" width="109" height="30"/>
+                                <state key="normal" title="Get Some Data!"/>
+                                <connections>
+                                    <action selector="staticRequest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YiH-XD-kYc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Static Data" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N8o-L8-D5a">
+                                <rect key="frame" x="236" y="66" width="85" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c3R-PB-ln1">
+                                <rect key="frame" x="216" y="95" width="168" height="30"/>
+                                <state key="normal" title="Start Dynamic Callbacks"/>
+                                <connections>
+                                    <action selector="dynamicStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QfI-e3-Fxx"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Dynamic Data" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdD-Cr-O7X">
+                                <rect key="frame" x="214" y="133" width="107" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DYj-vL-nJ1">
+                                <rect key="frame" x="217" y="162" width="166" height="30"/>
+                                <state key="normal" title="Stop Dynamic Callbacks"/>
+                                <connections>
+                                    <action selector="dynamicStop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QG9-sC-dSV"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9fR-PC-uBa">
+                                <rect key="frame" x="150" y="292" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="1li-DN-kYZ"/>
+                                    <constraint firstAttribute="width" constant="300" id="nzg-e1-Ofn"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ix0-oG-Ttr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5Xs-QN-e59"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9fR-PC-uBa" secondAttribute="bottom" constant="8" symbolic="YES" id="9iP-wk-noz"/>
+                            <constraint firstItem="fdD-Cr-O7X" firstAttribute="top" secondItem="c3R-PB-ln1" secondAttribute="bottom" constant="8" symbolic="YES" id="AvG-FB-IdC"/>
+                            <constraint firstItem="DYj-vL-nJ1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OUm-GP-A9o"/>
+                            <constraint firstItem="c3R-PB-ln1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Tmu-UE-eNJ"/>
+                            <constraint firstItem="DYj-vL-nJ1" firstAttribute="top" secondItem="fdD-Cr-O7X" secondAttribute="bottom" constant="8" symbolic="YES" id="VsQ-eQ-DoC"/>
+                            <constraint firstItem="N8o-L8-D5a" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jF8-RF-itA"/>
+                            <constraint firstItem="Ix0-oG-Ttr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="lE0-6P-qVF"/>
+                            <constraint firstItem="N8o-L8-D5a" firstAttribute="top" secondItem="Ix0-oG-Ttr" secondAttribute="bottom" constant="8" symbolic="YES" id="lGS-5X-KKs"/>
+                            <constraint firstItem="fdD-Cr-O7X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rRJ-QT-Yng"/>
+                            <constraint firstItem="c3R-PB-ln1" firstAttribute="top" secondItem="N8o-L8-D5a" secondAttribute="bottom" constant="8" symbolic="YES" id="si0-Wh-uv0"/>
+                            <constraint firstItem="9fR-PC-uBa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tUv-7Y-vEG"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dynamicLabel" destination="fdD-Cr-O7X" id="tNi-dn-Fru"/>
+                        <outlet property="dynamicStartButton" destination="c3R-PB-ln1" id="XZl-yj-lcE"/>
+                        <outlet property="dynamicStopButton" destination="DYj-vL-nJ1" id="ViE-iS-HiO"/>
+                        <outlet property="imageView" destination="9fR-PC-uBa" id="IWh-Jg-Trp"/>
+                        <outlet property="staticButton" destination="Ix0-oG-Ttr" id="s2S-hB-P4f"/>
+                        <outlet property="staticLabel" destination="N8o-L8-D5a" id="kxq-DN-XVD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
